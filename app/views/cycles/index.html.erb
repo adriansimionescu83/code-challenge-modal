@@ -1,29 +1,11 @@
-<div class="cycles-table">
-  <div class="cycles-table__header">
-    Choose cycle to share
-  </div>
-  <div class="cycles-table__content">
-    <%= render @cycles %>
-  </div>
-</div>
-<div id="modal" data-controller="modal" class="modal --hidden" data-modal-hidden-class="--hidden">
-  <div class="modal__card">
-    <div class="modal__content" data-modal-target="content">
-      <%= simple_form_for @invitation do |f| %>
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">Share Cycle with a new customer</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <%= f.input :email %>
-          <%= f.input :message %>
-          <%= f.input :cycle %>
-        </div>
-        <div class="modal-footer">
-          <%= f.submit "SEND INVITATION" %>
-        </div>
-      <% end %>
+<div class="container" data-controller="modal">
+  <div class="cycles-table">
+    <div class="cycles-table__header">
+      Choose cycle to share
     </div>
-    <%= inline_svg_tag 'icon-close-2.svg', class: 'modal__close-button' %>
+    <div class="cycles-table__content">
+      <%= render @cycles %>
+    </div>
   </div>
-</div>
+
+ </div>

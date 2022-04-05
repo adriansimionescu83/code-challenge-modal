@@ -4,6 +4,11 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(invitation_params)
     @invitation.cycle = @cycle
     @invitation.save
+
+    respond_to do |format|
+      format.js { render status: :ok }
+      format.html { redirect_to root }
+    end
   end
 
   private

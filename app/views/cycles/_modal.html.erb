@@ -1,0 +1,30 @@
+
+  <button data-action="click->modal#open">Open Modal</button>
+
+  <div id="modal" data-controller="modal" class="modal --hidden" data-modal-hidden-class="--hidden">
+    <div class="modal__card">
+      <div class="modal__content" data-modal-target="content">
+
+        <%= form_for cycle, cycle_invitations_path(cycle) do |f| %>
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Share Cycle with a new customer</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <%= f.email :email %>
+            <%= f.message :message %>
+            <%= f.cycle :cycle %>
+          </div>
+
+          <div class="modal-footer">
+            <%= f.submit "SEND INVITATION" %>
+          </div>
+
+        <% end %>
+
+      </div>
+      <%= inline_svg_tag 'icon-close-2.svg', class: 'modal__close-button' %>
+    </div>
+  </div>
