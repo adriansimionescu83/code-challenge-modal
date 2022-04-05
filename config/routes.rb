@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'cycles#index'
+  root 'cycles#index' do
+    resources :invitations, only: :create
+  end
 end
