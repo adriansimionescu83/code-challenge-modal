@@ -9,3 +9,11 @@ body{
   align-items: center;
   justify-content: center;
 }
+
+.btn-green {
+  background-color: #43d343;
+  border-radius: 5px;
+  width: 50%;
+  align-items: center;
+  border-style: none;
+}
