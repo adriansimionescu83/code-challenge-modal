@@ -6,8 +6,12 @@ export default class extends Controller {
 
   connect() {
     this.element.openModal = this.open.bind(this);
-    this.element.closeModal = this.close.bind(this)
+    this.element.closeModal = this.close.bind(this);
     this.isOpen = !this.element.classList.contains(this.hiddenClass);
+  }
+
+  initialize() {
+    console.log("Hello World");
   }
 
   close(){

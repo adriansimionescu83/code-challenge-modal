@@ -1,0 +1,10 @@
+console.log("Hello from erb");
+
+modal_content = document.getElementsByClassName("modal__content")[0];
+console.log(modal_content);
+
+modal_content.innerHTML = "<%= j render "invitations/form", invitation: @invitation %>";
+
+modal = document.getElementById("modal");
+
+modal.openModal();

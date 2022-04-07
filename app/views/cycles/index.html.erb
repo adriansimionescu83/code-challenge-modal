@@ -2,13 +2,16 @@
   <div class="cycles-table__header">
     Choose cycle to share
   </div>
-  <div class="cycles-table__content">
+  <div class="cycles-table__content" >
     <%= render @cycles %>
   </div>
 </div>
+
+
 <div id="modal" data-controller="modal" class="modal --hidden" data-modal-hidden-class="--hidden">
   <div class="modal__card">
     <div class="modal__content" data-modal-target="content"></div>
-    <%= inline_svg_tag 'icon-close-2.svg', class: 'modal__close-button' %>
+
+    <%= inline_svg_tag 'icon-close-2.svg', class: 'modal__close-button', data: { action: 'click->modal#close'} %>
   </div>
 </div>

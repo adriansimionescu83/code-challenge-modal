@@ -1,0 +1,23 @@
+
+<%= simple_form_for [@cycle, @invitation], url: create_invitation_path do |f| %>
+  <div class="modal__header">
+    <h4>Share Cycle with a new customer</h4>
+  </div>
+
+  <div class="modal__inputs">
+
+    <%= f.input :email, as: :text, label: false, placeholder: 'Email Addresses...*', required: true, error: 'email is mandatory, please specify one', input_html: {class: 'modal__email-input'} %>
+    <p>Want to include a message with the invite?</p>
+    <%= f.input :message, as: :text, label: false, placeholder: 'Please enter your message...', input_html: { class: 'modal__message-input'} %>
+    <div class="modal__confirmation">
+    <p>You are about to share with individuals above:<br></p>
+     <li><%= @cycle.name %></li>
+    </div>
+
+  </div>
+
+  <div class="modal__footer">
+    <%= f.submit 'SEND INVITATION', class: 'btn-green' %>
+  </div>
+
+<% end %>
