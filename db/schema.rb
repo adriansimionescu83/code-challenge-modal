@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_04_181834) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_07_085704) do
   create_table "cycles", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_04_181834) do
     t.integer "cycle_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "display_name"
     t.index ["cycle_id"], name: "index_invitations_on_cycle_id"
   end
 
