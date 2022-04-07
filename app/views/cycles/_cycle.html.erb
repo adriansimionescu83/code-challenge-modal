@@ -1,5 +1,4 @@
 <div class="cycles-table__row">
-    <%= link_to cycle.name, new_invitation_path(cycle), remote: true %>
+    <%# <%= cycle.name %>
+    <%= link_to cycle.name, new_invitation_path(cycle), class: "cycles-table__row-links", remote: true %>
 </div>
-
-<%# , data: {  modal_action: "click->modal#open" } %>

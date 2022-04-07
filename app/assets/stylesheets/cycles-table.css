@@ -16,11 +16,24 @@
   padding: 0.75rem 0;
 }
 
-.cycles-table__row{
+.cycles-table__row {
   padding: 0.75rem 2rem;
 }
-.cycles-table__row:hover{
+
+.cycles-table__row-links {
+  text-decoration: none !important;
+  color: white;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --primary-color: #10f5db;
+  padding: 0;
+}
+
+.cycles-table__row-links:hover {
   color: var(--primary-color);
   cursor: pointer;
 }
 
+.cycles-table__row:hover{
+  color: var(--primary-color);
+  cursor: pointer;
+}

@@ -12,6 +12,6 @@
   <div class="modal__card">
     <div class="modal__content" data-modal-target="content"></div>
 
-    <%= inline_svg_tag 'icon-close-2.svg', class: 'modal__close-button' %>
+    <%= inline_svg_tag 'icon-close-2.svg', class: 'modal__close-button', data: { action: 'click->modal#close'} %>
   </div>
 </div>
