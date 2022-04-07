@@ -44,6 +44,8 @@ gem "bootsnap", require: false
 
 gem "inline_svg"
 
+gem 'simple_form', github: 'heartcombo/simple_form'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -57,6 +59,11 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "shoulda-matchers"
+  gem 'pry-byebug'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+
 end
 
 group :development do
